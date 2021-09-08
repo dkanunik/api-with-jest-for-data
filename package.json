@@ -16,5 +16,8 @@
     "@jest/globals": "^27.0.6",
     "eslint": "7.32.0",
     "jest-environment-node-debug": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=14.17.2"
   }
 }
