@@ -1,5 +1,5 @@
-import PasteModel from '../model/Paste.mjs';
-import InputTestDataProvider from "../lib/InputTestDataProvider.mjs";
+import PasteModel from '../model/PasteModel';
+import InputTestDataProvider from "../lib/InputTestDataProvider";
 
 describe('As a Paste API user', () => {
     describe('I need to be able to create Paste and get', () => {

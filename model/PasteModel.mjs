@@ -1,8 +1,8 @@
-import AppConfig from '../configs/AppConfig.cjs';
+import AppConfig from '../configs/AppConfig';
 
 import axios from "axios";
 
-class Paste {
+class PasteModel {
 
     static async postPastePlainData(data) {
         try {
@@ -24,4 +24,4 @@ class Paste {
 
 }
 
-export default Paste;
+export default PasteModel;
