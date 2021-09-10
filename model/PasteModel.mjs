@@ -1,18 +1,19 @@
 import AppConfig from '../configs/AppConfig';
+import TokenProvider from '../lib/TokenProvider';
 
-import axios from "axios";
+import axios from 'axios';
 
 class PasteModel {
 
-    static async postPastePlainData(data) {
+    static async postPastePlainData(data, tokenName) {
+        const token = TokenProvider.getToken(tokenName);
         try {
             return await axios.post(AppConfig.baseUrl,
-                'api_dev_key=067f9dbb11a1a801239b06b695a4102c' +
+                `api_dev_key=${token}` +
                 '&api_paste_code=test' +
                 '&api_option=paste');
         } catch (e) {
-            console.log(`Request [${AppConfig.baseUrl} with data ${data}] returned: `);
-            console.log(e.response.data);
+            return e.response;
         }
     }
 
