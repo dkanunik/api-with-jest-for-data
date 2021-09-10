@@ -4,7 +4,7 @@ import InputTestDataProvider from '../lib/InputTestDataProvider';
 describe('As a Paste API user', () => {
     describe('I need to be able to create Paste and get', () => {
         test('200 for a valid data', async() => {
-            const {data} = await PasteModel.postPastePlainData('test', '.pastbin_token');
+            const {data} = await PasteModel.postPastePlainData('test', 'pastbin_token_1');
             // TODO: received data contains URL of created Paste: "https://pastebin.com/C3ZZxfm7"
             // put your verifications here
             // ...
